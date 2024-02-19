@@ -1,0 +1,128 @@
+.icon > :nth-child(n) {
+  transition: all 0.5s ease-in-out;
+}
+
+.icon.active > :first-child {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(50deg) translateX(0.5rem);
+}
+.icon.active > :nth-child(2) {
+  opacity: 0;
+}
+.icon.active > :last-child {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-50deg) translateX(0.5rem);
+}
+.downloadcv {
+  transition: all 0.5s ease-in-out;
+}
+.movetotop {
+  animation: movetotop 1.5s ease-in-out 0s infinite;
+}
+@keyframes movetotop {
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.down_arrow {
+  font-size: 3rem;
+  animation: arrow_drop 1.5s ease-in-out 0.5s infinite forwards;
+}
+@keyframes arrow_drop {
+  0% {
+    opacity: 0;
+    transform: translate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+}
+.blink {
+  animation: blink 0.5s linear 0.1s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border-bottom: 0.5px solid black;
+  width: 100%;
+  outline: none;
+}
+input:focus {
+  background-color: transparent;
+  border-bottom: 2px solid black;
+  width: 100%;
+  outline: none;
+}
+.expand.close {
+  transition: transform 0.5s linear;
+  transform: rotate(0deg);
+}
+.expand.active {
+  transition: transform 0.5s linear;
+  transform: rotate(180deg);
+}
+.answer {
+  transition: height 5s ease;
+}
+
+ul li {
+  padding-left: 10px;
+}
+ul li.active {
+  border-bottom: 2px solid red;
+}
+.image-item:hover .item {
+  height: 400px;
+  width: 400px;
+  transition: transform 0.5s ease 0.1s;
+  transform: scale(1.4);
+}
+
+.image-item {
+  overflow: hidden;
+}
+.image-item:hover .item-cover {
+  transition: all 0.5s ease 0.1s;
+  opacity: 0.8;
+  color: white;
+}
+
+.slick-prev:before {
+  font-size: 60px !important;
+  margin-left: -100px;
+}
+.slick-arrow.slick-prev:before,
+.slick-arrow.slick-next:before {
+  display: none;
+}
+.slider-container:hover .slick-arrow.slick-prev:before,
+.slider-container:hover .slick-arrow.slick-next:before {
+  display: block;
+}
+.slick-next::before {
+  font-size: 60px !important;
+  margin-right: -100px;
+}
+.slick-dots li button {
+  background-color: transparent;
+  font-size: 60px;
+}
+.slick-dots li button::before {
+  color: yellow !important;
+  font-size: 15px !important;
+  gap: 4px;
+}
+li.slick-active button::before {
+  color: green !important;
+}
